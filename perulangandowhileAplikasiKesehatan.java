@@ -7,7 +7,9 @@ public class perulangandowhileAplikasiKesehatan {
 
         do {
             // Menampilkan menu sederhana
+            System.out.println("========================");
             System.out.println("=== Menu Rumah Sakit ===");
+            System.out.println("========================");
             System.out.println("1. Tambah Pasien");
             System.out.println("2. Lihat Daftar Pasien");
             System.out.println("3. Keluar");
