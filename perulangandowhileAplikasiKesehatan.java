@@ -24,7 +24,8 @@ public class perulangandowhileAplikasiKesehatan {
                 System.out.println("Pilihan tidak valid. Silakan coba lagi.");
             }
         } while (pilihan != 3);
-        input.close();
+        scan.close();
     }}
+
 
 
