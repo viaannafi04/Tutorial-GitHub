@@ -19,6 +19,8 @@ public class perulangandowhileAplikasiKesehatan {
 
             if (pilihan == 1) {
                 // Fitur perhitungan BMI
+                System.out.print("Masukkan nama pasien: "); 
+                String nama = scan.nextLine();
                 System.out.print("Masukkan berat badan (kg): ");
                 double berat = scan.nextDouble();
                 System.out.print("Masukkan tinggi badan (meter): ");
@@ -40,8 +42,19 @@ public class perulangandowhileAplikasiKesehatan {
 
         
             } else if (pilihan == 2) { 
-                System.out.println("Fitur Tambah Pasien belum tersedia.");
+                System.out.print("Masukkan nama pasien baru: ");
+                String pasienBaru = scan.nextLine();
+                daftarPasien.add(pasienBaru); // menyimpan nama pasien ke daftar
+                System.out.println("Pasien " + pasienBaru + " berhasil ditambahkan!");
             } else if (pilihan == 3) {
+                System.out.println("=== Daftar Pasien ===");
+                if (daftarPasien.isEmpty()) {
+                    System.out.println("Belum ada pasien yang terdaftar.");
+                } else {
+                    int no = 1;
+                    for (String p : daftarPasien) {
+                        System.out.println(no + ". " + p);
+                        no++;
                 System.out.println("Fitur Lihat Daftar Pasien belum tersedia.");
             } else if (pilihan == 4) {
                 System.out.println("Terima kasih telah menggunakan aplikasi.");
@@ -55,6 +68,7 @@ public class perulangandowhileAplikasiKesehatan {
         scan.close();
     }
 }
+
 
 
 
