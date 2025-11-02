@@ -1,9 +1,11 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 public class perulangandowhileAplikasiKesehatan {
     public static void main (String[] args){
      // membuat variabel dan scanner DO WHILE
      Scanner scan = new Scanner (System.in);
       int pilihan;
+      ArrayList<String> daftarPasien = new ArrayList<>();
 
         do {
             // Menampilkan menu sederhana
@@ -16,6 +18,7 @@ public class perulangandowhileAplikasiKesehatan {
             System.out.println("4. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = scan.nextInt();
+            scan.nextLine();
 
             if (pilihan == 1) {
                 // Fitur perhitungan BMI
@@ -55,7 +58,8 @@ public class perulangandowhileAplikasiKesehatan {
                     for (String p : daftarPasien) {
                         System.out.println(no + ". " + p);
                         no++;
-                System.out.println("Fitur Lihat Daftar Pasien belum tersedia.");
+                    }
+                }
             } else if (pilihan == 4) {
                 System.out.println("Terima kasih telah menggunakan aplikasi.");
             } else {
@@ -63,11 +67,12 @@ public class perulangandowhileAplikasiKesehatan {
             }
 
             System.out.println(); // memberi jarak antar output
-        } while (pilihan != 3);
+        } while (pilihan != 4);
 
         scan.close();
     }
 }
+
 
 
 
